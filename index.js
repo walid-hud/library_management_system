@@ -7,7 +7,7 @@ const banner = `
 ██║     ██║╚██╔╝██║╚════██║
 ███████╗██║ ╚═╝ ██║███████║
 ╚══════╝╚═╝     ╚═╝╚══════╝
-Library management system
+Library Management System
 
 `;
 // global counters to use as IDs
@@ -230,8 +230,7 @@ async function find_book_by_ID() {
 			required: true,
 			validate: (value) => {
 				let value_as_number = Number(value);
-				if (isNaN(value_as_number) || value_as_number <= 0)
-					return "invalid id !";
+				if (isNaN(value_as_number) || value_as_number <= 0) return "invalid id !";
 				return true;
 			},
 		})
@@ -567,6 +566,7 @@ returned   : ${loan.is_returned}
 		);
 	}
 }
+
 // main program
 log(banner);
 let exit_program = false;
